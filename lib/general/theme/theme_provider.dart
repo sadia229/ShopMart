@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+class AppThemeState extends ChangeNotifier {
+  var isDarkModeEnabled = false;
+
+  void setLightTheme() {
+    isDarkModeEnabled = false;
+    notifyListeners();
+  }
+
+  void setDarkTheme() {
+    isDarkModeEnabled = true;
+    notifyListeners();
+  }
+  void setDarkModeState() {
+    isDarkModeEnabled = !isDarkModeEnabled;
+    notifyListeners();
+  }
+}
+
+// Theme
+final appThemeStateNotifier = ChangeNotifierProvider((ref) => AppThemeState());
