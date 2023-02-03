@@ -15,7 +15,6 @@ class BaseClient {
         'Content-type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
         //'Authorization': 'Bearer ${await storage.read('token')}',
-        'Authorization': 'Bearer ${Constants.token}',
       },
     );
     return options;

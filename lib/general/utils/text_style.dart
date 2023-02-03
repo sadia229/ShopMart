@@ -58,6 +58,11 @@ class KTextStyle {
     fontWeight: FontWeight.w400,
     fontFamily: GoogleFonts.inter().fontFamily,
   );
+  static TextStyle title9 = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+    fontFamily: GoogleFonts.inter().fontFamily,
+  );
   static TextStyle footer = TextStyle(
     fontSize: 10,
     fontWeight: FontWeight.w500,

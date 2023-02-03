@@ -5,9 +5,9 @@ import '../constants/constants.dart';
 class SharedPrefs {
   static getToken() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    var token = prefs.getString(Constants.token);
-    print("get token : $token");
-    return token ?? '';
+    // var token = prefs.getString(Constants.token);
+    // print("get token : $token");
+    // return token ?? '';
   }
 
   static saveToken(token) async {
