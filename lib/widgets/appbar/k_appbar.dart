@@ -11,47 +11,54 @@ class KAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      backgroundColor: KColor.appBase,
+      backgroundColor: KColor.base,
       elevation: 0,
       title: Container(
-        padding: const EdgeInsets.only(left: 6, right: 6, top: 16),
+        padding: const EdgeInsets.only(top: 16),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              width: 50,
-              height: 50,
+              width: 35,
+              height: 35,
               child: Image.asset(
                 AssetPath.imagePlaceholder,
                 fit: BoxFit.cover,
               ),
             ),
             const SizedBox(width: 8),
-            Column(
-              children: [
-                Text(
-                  'Hello Sadia',
-                  style: KTextStyle.title6.copyWith(color: KColor.white),
-                ),
-                const SizedBox(height: 8),
-                Row(
-                  children: [
-                    Image.asset(AssetPath.location, height: 17),
-                    const SizedBox(width: 4),
-                    Text(
-                      'Hello Sadia',
-                      style: KTextStyle.title8.copyWith(color: KColor.white),
-                    ),
-                  ],
-                ),
-              ],
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Hello Sadia',
+                    style: KTextStyle.title9.copyWith(color: KColor.white),
+                  ),
+                  const SizedBox(height: 5),
+                  Row(
+                    children: [
+                      Image.asset(AssetPath.location, height: 15),
+                      const SizedBox(width: 4),
+                      Expanded(
+                        flex: 1,
+                        child: Text(
+                          'Shyamoli Square Shopping Mall',
+                          style:
+                              KTextStyle.title8.copyWith(color: KColor.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-            SizedBox(width: context.screenWidth*0.2),
-            Image.asset(AssetPath.notification,height: 24),
-            SizedBox(width: context.screenWidth*0.052),
-            Image.asset(AssetPath.cart,height: 35),
-            SizedBox(width: context.screenWidth*0.056),
-            Image.asset(AssetPath.drawer,height: 25),
+            const SizedBox(width: 20),
+            Image.asset(AssetPath.notification, height: 28),
+            SizedBox(width: context.screenWidth * 0.06),
+            Image.asset(AssetPath.cart, height: 35),
+            SizedBox(width: context.screenWidth * 0.07),
+            Image.asset(AssetPath.drawer, height: 28),
           ],
         ),
       ),
