@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:shopmart/general/utils/colors.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shopmart/general/utils/config.dart';
-import 'package:shopmart/widgets/card/product_card.dart';
 import 'package:shopmart/widgets/card/products_card.dart';
 import 'package:shopmart/widgets/card/section_card.dart';
 
-class BestSellingProducts extends StatelessWidget {
+import '../providers/favourite_provider.dart';
+
+class BestSellingProducts extends ConsumerWidget {
   const BestSellingProducts({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
@@ -25,7 +26,13 @@ class BestSellingProducts extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: 10,
               itemBuilder: (context, index) {
-                return const ProductsCard();
+                final favourite = ref.watch(favouriteProvider(index));
+                return ProductsCard(
+                  tap: () {
+                    ref.read(favouriteProvider(index).notifier).addFavourite();
+                  },
+                  currentIndex: index,
+                );
               },
             ),
           ),
