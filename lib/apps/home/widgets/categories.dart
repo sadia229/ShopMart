@@ -11,44 +11,40 @@ class Categories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      elevation: 4,
-      child: Container(
-        padding: const EdgeInsets.only(top: 10),
-        color: KColor.lightWhite,
-        child: Column(
-          children: [
-            GridView.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
-                crossAxisSpacing: 35.0,
-                mainAxisSpacing: 7.0,
-              ),
-              shrinkWrap: true,
-              itemCount: category.length,
-              itemBuilder: (context, index) {
-                return CategoryCard(
-                  img: categoryImage[index],
-                  name: category[index],
-                );
-              },
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+      child: Column(
+        children: [
+          GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 4,
+              crossAxisSpacing: 35.0,
+              mainAxisSpacing: 7.0,
             ),
-            const SizedBox(height: 15),
-            TextButton(
-              onPressed: () {
-                showModalBottomSheet(
-                  context: context,
-                  backgroundColor: Colors.transparent,
-                  builder: (_) => BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
-                    child: const CategoryDialog(),
-                  ),
-                );
-              },
-              child: const SeeMore(),
-            ),
-          ],
-        ),
+            shrinkWrap: true,
+            itemCount: category.length,
+            itemBuilder: (context, index) {
+              return CategoryCard(
+                img: categoryImage[index],
+                name: category[index],
+              );
+            },
+          ),
+          const SizedBox(height: 10),
+          TextButton(
+            onPressed: () {
+              showModalBottomSheet(
+                context: context,
+                backgroundColor: Colors.transparent,
+                builder: (_) => BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
+                  child: const CategoryDialog(),
+                ),
+              );
+            },
+            child: const SeeMore(),
+          ),
+        ],
       ),
     );
   }

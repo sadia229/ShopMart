@@ -54,11 +54,16 @@ class KAppBar extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 20),
-            Image.asset(AssetPath.notification, height: 28),
+            InkWell(
+              onTap: (){
+                Navigator.pushNamed(context, '/test');
+              },
+              child: Image.asset(AssetPath.notification, height: 25),
+            ),
             SizedBox(width: context.screenWidth * 0.06),
-            Image.asset(AssetPath.cart, height: 35),
+            Image.asset(AssetPath.cart, height: 30),
             SizedBox(width: context.screenWidth * 0.07),
-            Image.asset(AssetPath.drawer, height: 28),
+            Image.asset(AssetPath.drawer, height: 25),
           ],
         ),
       ),

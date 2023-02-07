@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shopmart/apps/home/providers/favourite_provider.dart';
+import 'package:shopmart/general/constants/asset_path.dart';
 import 'package:shopmart/general/utils/colors.dart';
 import 'package:shopmart/general/utils/config.dart';
 import '../../general/utils/text_style.dart';
@@ -39,8 +40,8 @@ class ProductsCard extends ConsumerWidget {
                   Center(
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
-                      child: Image.network(
-                        'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
+                      child: Image.asset(
+                        AssetPath.product,
                         height: 120.0,
                         width: context.screenWidth * 0.4,
                         fit: BoxFit.fill,
@@ -103,12 +104,12 @@ class ProductsCard extends ConsumerWidget {
             alignment: Alignment.topRight,
             child: CircleAvatar(
               radius: 24,
-              backgroundColor: KColor.secondary,
+              backgroundColor: KColor.favBg,
               child: IconButton(
                 onPressed: tap,
                 icon: Icon(
                   favourite ? Icons.favorite : Icons.favorite_outline,
-                  color: favourite ? KColor.base : KColor.base,
+                  color: favourite ? KColor.strongAgree : KColor.strongAgree,
                   size: favourite ? 25 : 20,
                 ),
               ),

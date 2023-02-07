@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopmart/apps/home/screens/dropdown_screen.dart';
 import 'package:shopmart/apps/main_screen.dart';
 
 import '../../apps/home/screens/home_screen.dart';
@@ -8,8 +9,12 @@ class RouteGenerator {
     //final Map? arguments = settings.arguments as Map?;
     switch (settings.name) {
       case '/main':
+      return MaterialPageRoute(
+        builder: (_) => const MainScreen(),
+      );
+      case '/test':
         return MaterialPageRoute(
-          builder: (_) => const MainScreen(),
+          builder: (_) => const DropdownScreen(),
         );
       case '/login':
         return MaterialPageRoute(

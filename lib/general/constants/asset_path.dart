@@ -15,6 +15,8 @@ class AssetPath {
   static const sports = 'assets/images/sports.png';
   static const sanitizer = 'assets/images/soap.png';
   static const nature = 'assets/images/nature.png';
+  static const filter = 'assets/images/filter.png';
+  static const product = 'assets/images/product1.jpg';
   // banners
   static const banner1 = 'assets/banners/bn-01.jpg';
   static const banner2 = 'assets/banners/bn-02.jpg';
