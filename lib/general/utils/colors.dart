@@ -9,6 +9,8 @@ class KColor {
   static Color lightWhite = Colors.white10;
   static Color white = const Color(0xFFFFFFFF);
   static Color black = const Color(0xFF000000);
+  static Color textFieldBorder = const Color(0xFFE2E8F0);
+  static Color textFieldFocusBorder = const Color(0xFF93D5D0);
   static Color strongAgree = Colors.orange;
   static Color favBg = Colors.orange.shade100.withOpacity(0.7);
 }

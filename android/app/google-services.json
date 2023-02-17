@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "185909956007",
+    "project_id": "shopmart-b5571",
+    "storage_bucket": "shopmart-b5571.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185909956007:android:fbadc1517334773e6cfa82",
+        "android_client_info": {
+          "package_name": "com.example.shopmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185909956007-s1lscko8vuh1jb5la5icvqgg1crb6uvv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8tyIotP3PQke6ay9IUvmbinr3qjMboYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185909956007-s1lscko8vuh1jb5la5icvqgg1crb6uvv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
